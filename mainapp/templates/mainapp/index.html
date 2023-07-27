@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0">
-    <title>::: Index 페이지 :::</title>
+    <title>::: 메인 페이지 :::</title>
 
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -31,6 +31,18 @@
         justify-content: center; /* 가로 축 가운데 정렬 */
         align-items: center; /* 세로 축 가운데 정렬 */
       }
+
+      audio {
+        filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+        width: 200px;
+        height: 25px;
+      }
+    
+      {% comment %} audio::-webkit-media-controls-panel {
+        background-color: #f2f2f2; /* 컨트롤러 패널의 배경 색상 */
+        color: blue; /* 아이콘과 텍스트의 색상 */
+      } {% endcomment %}
+
     </style>
 </head>
 
@@ -44,29 +56,38 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Main</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">데이터분석</a></li>
+          <li><a class="nav-link scrollto" href="#about">태양</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio2">오로라</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio1">전리층</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio3">데이터분석</a></li>
+          <li class="dropdown"><a href="#"><span>실시간 우주전파환경</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="any2/">흑점,코로나파장,오로라</a></li>
+              <li><a href="silsi/">태양풍</a></li>
+              <li><a href="silsi2/">X-선지수,양성자지수,KP지수</a></li>
+            </ul>
+          </li>
           <li><a class="nav-link scrollto" href="#team">팀원소개</a></li>
+          <audio controls> <source src="static/mainapp/중성미자.mp3" type="audio/mpeg"> </audio>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
       <!-- .navbar -->
     </div>
-    </header>
-    <!-- End Header -->
+</header>
+<!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container position-relative">
-      <h1>우주의 세계에 오신걸 환영합니다.</h1>
-      <h2>아래 클릭해주세요.</h2>
-      <a href="#about" class="btn-get-started scrollto">이동하기</a>
+      <h1>Welcome to Universe</h1>
     </div>
     </section>
     <!-- End Hero -->
 
     <main id="main">
 
-    <!-- ======= Clients Section ======= -->
+    <!-- ======= 작업도구 Section ======= -->
     <section id="clients" class="clients section-bg">
         <div class="container">
   
@@ -77,7 +98,7 @@
             </div>
   
             <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="static/mainapp/img/clients/pandas_secondary.png" class="img-fluid" alt="">
+              <img src="static/mainapp/img/clients/pandas.png" class="img-fluid" alt="">
             </div>
   
             <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
@@ -89,98 +110,430 @@
             </div>
   
             <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="static/mainapp/img/clients/logo-wide-lightbg.png" class="img-fluid" alt="">
+              <img src="static/mainapp/img/clients/Pearson.png" class="img-fluid" alt="">
             </div>
-          </div>
-        </div>
-    </section>
-    <!-- End Clients Section -->
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-  
-          <div class="section-title">
-            <h2>데이터분석</h2>
-          </div>
-  
-          <div class="row">
-            <div class="col-lg-12 d-flex justify-content-center">
-              <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">전체</li>
-                <li data-filter=".filter-sunplot">흑점 수</li>
-                <li data-filter=".filter-geomagnetic_storm">지자기폭풍</li>
-                <li data-filter=".filter-ionosphere">전리층</li>
-                <li data-filter=".filter-aurora">오로라</li>
-                <li data-filter=".filter-El_Niño">엘니뇨</li>
-              </ul>
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="static/mainapp/img/clients/Visual_Studio.png" class="img-fluid" alt="">
             </div>
           </div>
-  
-          <div class="row portfolio-container" id="data">
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-sunplot", id="sunplot1">
-              <img src="static/mainapp/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>흑점 수</h4>
-                <p>분석내용</p>
-                <a href="static/mainapp/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-geomagnetic_storm">
-              <img src="static/mainapp/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>지자기폭풍</h4>
-                <p>분석내용</p>
-                <a href="static/mainapp/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-ionosphere">
-              <img src="static/mainapp/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>전리층</h4>
-                <p>분석내용</p>
-                <a href="static/mainapp/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-aurora">
-              <img src="static/mainapp/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>오로라</h4>
-                <p>분석내용</p>
-                <a href="static/mainapp/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-El_Niño">
-              <img src="static/mainapp/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>엘니뇨</h4>
-                <p>분석내용</p>
-                <a href="static/mainapp/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-   
-          </div>
-  
         </div>
     </section>
-    <!-- End Portfolio Section -->
+    <!-- End 작업도구 Section -->
+
+    <!-- ======= 태양 Section ======= -->
+    <section id="about" class="team section-bg">
+      <div class="container"style="text-align: center;">
+
+        <div class="section-title"style="text-align: center;">
+          <h2>태양</h2>
+            <div class="row"style="text-align: center;" >
+                <p><h6>본명:태양(太陽,Sun) </h4></p>
+                <p><h6>나이:약 45억 6721만 년(4.603 × 10^9년)</h6> </p>
+                <p><h6>지름,질량 :1,392,684±130km,1.9 55×1030 kg</h6></p>
+                <p><h6>온도:1,570만 °C</h6></p>
+              </div>
+        </div>
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="static/mainapp/img/img.gif" class="img-fluid" alt="">
+                <div class="social">
+
+                  <a href="https://sdo.gsfc.nasa.gov/assets/img/ultra_hd/0304304Whip_best.mp4"><i class="bi bi-instagram"></i></a>
+
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>코로나</h4>
+                <span>코로나</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="static/mainapp/img/sunspot.gif" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_1700.mp4"><i class="bi bi-instagram"></i></a>
+
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>흑점</h4>
+                <span>흑점</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="static/mainapp/img/x-ray.gif" class="img-fluid" alt="">
+                <div class="social">
+
+                  <a href="https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0131.mp4"><i class="bi bi-instagram"></i></a>
+
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>X-선</h4>
+                <span>x-선</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="static/mainapp/img/flare.gif" class="img-fluid" alt="">
+                <div class="social">
+
+                  <a href="https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0335.mp4"><i class="bi bi-instagram"></i></a>
+
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>플레어</h4>
+                <span>플레어</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End 태양 Section -->
+
+    <!-- ======= 태양2 Section ======= -->
+    <section class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>태양 이론</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">전체</li>
+              <li data-filter=".filter-sun1">표면</li>
+              <li data-filter=".filter-sun2">핵</li>
+              <li data-filter=".filter-sun3">대기</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sun1">
+            <img src="static/mainapp/img/portfolio/sun/광구.jpg" class="img-fluid" alt="" height="512">
+            <div class="portfolio-info">
+              <h4>광구</h4>
+              <a href="static/mainapp/img/portfolio/sun/광구.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="광구"><i class="bx bx-plus"></i></a>
+              <a href="/sun1_1/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sun1">
+            <img src="static/mainapp/img/portfolio/sun/sunspot.png" class="img-fluid" alt="" height="512">
+            <div class="portfolio-info">
+              <h4>흑점</h4>
+              <a href="static/mainapp/img/portfolio/sun/sunspot.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="흑점"><i class="bx bx-plus"></i></a>
+              <a href="/sun1_2/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          {% comment %} 핵 {% endcomment %}
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sun2">
+            <img src="static/mainapp/img/portfolio/sun/핵융합.jpg" class="img-fluid" alt="" height="512">
+            <div class="portfolio-info">
+              <h4>핵 융합</h4>
+              <a href="static/mainapp/img/portfolio/sun/핵융합.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="핵 융합"><i class="bx bx-plus"></i></a>
+              <a href="/sun2_1/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          
+          {% comment %} 대기 {% endcomment %}
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sun3">
+            <img src="static/mainapp/img/portfolio/sun/채층.jpg" class="img-fluid" alt="" height="512">
+            <div class="portfolio-info">
+              <h4>채층</h4>
+              <a href="static/mainapp/img/portfolio/sun/채층.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="채층"><i class="bx bx-plus"></i></a>
+              <a href="/sun3_1/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sun3">
+            <img src="static/mainapp/img/portfolio/sun/코로나.png" class="img-fluid" alt="" height="512">
+            <div class="portfolio-info">
+              <h4>코로나</h4>
+              <a href="static/mainapp/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="코로나"><i class="bx bx-plus"></i></a>
+              <a href="/sun3_2/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sun3">
+            <img src="static/mainapp/img/portfolio/sun/홍염.png" class="img-fluid" alt="" height="512">
+            <div class="portfolio-info">
+              <h4>홍염</h4>
+              <a href="static/mainapp/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="홍염"><i class="bx bx-plus"></i></a>
+              <a href="/sun3_3/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sun3">
+            <img src="static/mainapp/img/portfolio/sun/플레어.png" class="img-fluid" alt="" height="512">
+            <div class="portfolio-info">
+              <h4>플레어</h4>
+              <a href="static/mainapp/img/portfolio/sun/플레어.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="플레어"><i class="bx bx-plus"></i></a>
+              <a href="/sun3_4/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          
+
+        </div>
+
+      </div>
+  </section>
+    <!-- End 태양2 Section -->
+
+
+
+
+
+    <!-- ======= 오로라 Section ======= -->
+    <section id="portfolio2" class="portfolio">
+      <div class="container">
+        <div class="section-title"style="text-align: center;">
+          <h2>오로라</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="static/mainapp/img/portfolio/aurora3.gif" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <div class="row">
+                <h3><strong>정의</strong></h3>
+                <p>오로라가 가장 자주 보이는 곳은 남극및 북극 양극지방의 지구자기위도 65∼70도의 범위로서 이 지역을 오로라대(auroral zone)라고 한다. 
+                  오로라대보다 고위도(극관지역)나 저위도에서의 출현빈도는 감소한다. 
+                  출현하는 위도는 지방시(地方時)에 따라 다르며, 야간에는 65∼70도에 많으며, 주간에는 75∼80도로 위도가 높아진다.
+                  극관 글로 오로라는 태양의 플레어 현상 때 태양에서 직접 날아오는 100만eV 이상의 고에너지 양성자가 직접 극관지방에 입사함에 의한 것이다. 입사입자는 높은 운동에너지를 가진 양성자이기 때문에 대기권으로 침투하는 깊이가 깊고 따라서 오로라 고도는 낮다. 
+                  대기권에서 양성자가 전자를 포착해서 중성수소로 변하기 때문에 수소의 휘선(Hα, Hβ 등)이 강하다.
+                  대형 오로라는 항상 변동하며, 가장 현저한 활동은 오벌의 한밤중의 부분에서 밝기가 증가하여 격렬해지기 시작하고 몇 분 사이에 오벌의 폭이 수백km로 확대되면서 폭발적으로 발달한다.
+                   이를 오로라폭풍이라고 한다.</p>
+            </div>
+              {% comment %} <div class="col-md-6">
+                <i class="bx bx-cube-alt"></i>
+                <h4>Ullamco laboris nisi</h4>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+              </div> {% endcomment %}
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End 오로라 Section -->
+
+    <!-- ======= 전리층 Section ======= -->
+    <section id="portfolio1" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>전리층</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters3">
+              <li data-filter="*" class="filter-active3">전체</li>
+              <li data-filter=".filter-a1">임계 주파수</li>
+              <li data-filter=".filter-a2">전리권 D층</li>
+              <li data-filter=".filter-a3">전리권 E층</li>
+              <li data-filter=".filter-a4">전리권 F층</li>
+              <li data-filter=".filter-a5">전리층</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container3">
+
+          <div class="col-lg-4 col-md-6 portfolio-item3 filter-a1">
+            <img src="static/mainapp/img/portfolio/임계주파수.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>층별 임계주파수</h4>
+              <p>상세 설명 클릭</p>
+              <a href="/details/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item3 filter-a3">
+            <img src="static/mainapp/img/portfolio/이층.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>전리권 E층</h4>
+              <p>상세 설명 클릭</p>
+              <a href="/details3/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item3 filter-a4">
+            <img src="static/mainapp/img/portfolio/f1층.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>전리권 F층</h4>
+              <p>상세 설명 클릭 ~</p>
+              
+              <a href="/details4/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item3 filter-a5">
+            <img src="static/mainapp/img/portfolio/전리층.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>전리층</h4>
+              <p>상세 설명 클릭</p>
+              
+              <a href="/details5/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item3 filter-a2">
+            <img src="static/mainapp/img/portfolio/디층.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>전리권 D층</h4>
+              <p>상세 설명 클릭</p>
+              
+              <a href="/details2/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+  </section>
+  <!-- End 전리층 Section -->
+
+  <!-- ======= 데이터분석 Section ======= -->
+  <section id="portfolio3" class="portfolio">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>데이터분석</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters2">
+            <li data-filter="*" class="filter-active2">전체</li>
+            <li data-filter=".filter-sunplot">태양 활동</li>
+            <li data-filter=".filter-ionosphere">전리층</li>
+            <li data-filter=".filter-elino">엘니뇨</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container2">
+
+        <div class="col-lg-4 col-md-6 portfolio-item2 filter-sunplot">
+          <img src="static/mainapp/img/portfolio/sunspot/sunspot.png" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>흑점 수</h4>
+            <p>연도별 흑점수 주기 Graph</p>
+            <a href="static/mainapp/img/portfolio/sunspot/sunspot.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+            <a href="/details_sunspot/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item2 filter-sunplot">
+          <img src="static/mainapp/img/portfolio/UME/UME_linearspeed_MPA_sunspot.png" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>CME</h4>
+            <p>CME의 linear speed, MPA Graph</p>
+
+            <a href="static/mainapp/img/portfolio/UME/UME_linearspeed_MPA_sunspot.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+            <a href="/details_cme/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item2 filter-sunplot">
+          <img src="static/mainapp/img/portfolio/radioflux/radio_sunspot.png" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Radio Flux</h4>
+            <p>월별 Radio Flux Graph</p>
+            <a href="static/mainapp/img/portfolio/radioflux/radio_sunspot.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+            <a href="/details_radioflux/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item2 filter-sunplot">
+          <img src="static/mainapp/img/portfolio/xline/x_sunspot.png" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>X선 등급</h4>
+            <p>월별 X선 등급 Graph</p>
+            <a href="static/mainapp/img/portfolio/xline/x_sunspot.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+            <a href="/details_xline/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item2 filter-ionosphere">
+          <img src="static/mainapp/img/portfolio/thermosphere/thermo_sunspot.png" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>열권</h4>
+            <p>연도별 열권 기후지수(TCI) Graph</p>
+            <a href="static/mainapp/img/portfolio/thermosphere/thermo_sunspot.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+            <a href="/details_thermo/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item2 filter-ionosphere">
+          <img src="static/mainapp/img/portfolio/frequency/e_f1_f2_sunspot.png" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>임계주파수</h4>
+            <p>일별 전리층에 대한 임계주파수 Graph</p>
+            <a href="static/mainapp/img/portfolio/frequency/e_f1_f2_sunspot.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+            <a href="/details_frequency/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item2 filter-ionosphere">
+          <img src="static/mainapp/img/portfolio/kp/kp_sunspot.png" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Kp 지수</h4>
+            <p>월별 Kp 지수 Graph</p>
+            <a href="static/mainapp/img/portfolio/kp/kp_sunspot.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+            <a href="/details_kp/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+        
+
+        <div class="col-lg-4 col-md-6 portfolio-item2 filter-elino">
+          <img src="static/mainapp/img/portfolio/elino/ano_sunspot.png" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>아노말리 지수</h4>
+            <p>연도별 아노말리 지수 Graph</p>
+            <a href="static/mainapp/img/portfolio/elino/ano_sunspot.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bx bx-plus"></i></a>
+            <a href="/details_elino/" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- End 데이터분석 Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
         <div class="container">
   
           <div class="section-title">
-            <h2>일석이조</h2>
+            <h2>일석2조</h2>
 
           </div>
   
@@ -193,7 +546,7 @@
                   <div class="member-info">
                     <h4>최준용</h4>
                     <span>Leader</span>
-                    <span>OO 및 OO 담당</span>
+                    <span>데이터분석 및 PPT 담당</span>
                   </div>
                 </div>
               </div>
@@ -206,7 +559,7 @@
                   <div class="member-info">
                     <h4>김명기</h4>
                     <span>Member</span>
-                    <span>OO 및 OO 담당</span>
+                    <span>엘리뇨 및 웹페이지 담당</span>
                   </div>
                 </div>
               </div>
@@ -223,7 +576,7 @@
                   <div class="member-info">
                     <h4>김소연</h4>
                     <span>Member</span>
-                    <span>OO 및 OO 담당</span>
+                    <span>오로라, 상관관계 분석 및 웹페이지 담당</span>
                   </div>
                 </div>
               </div>
@@ -236,7 +589,7 @@
                   <div class="member-info">
                     <h4>김태헌</h4>
                     <span>Member</span>
-                    <span>OO 및 OO 담당</span>
+                    <span>엘리뇨 및 시각화 담당</span>
                   </div>
                 </div>
               </div>
@@ -249,7 +602,7 @@
                   <div class="member-info">
                     <h4>정유나</h4>
                     <span>Member</span>
-                    <span>OO 및 OO 담당</span>
+                    <span>지자기 및 웹페이지 담당</span>
                   </div>
                 </div>
               </div>
@@ -278,3 +631,23 @@
 
 </body>
 </html>
+<!-- ======= End 데이터분석 Section ======= -->
+
+<!-- Footer Section -->
+<footer id="footer">
+  <div class="container d-md-flex py-4">
+
+    <div class="me-md-auto text-center text-md-start">
+      <div class="copyright">
+        &copy; Copyright <strong><span>일석2조</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+  </div>
+</footer>
+<!-- End Footer -->

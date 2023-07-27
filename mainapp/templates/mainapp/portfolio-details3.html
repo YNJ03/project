@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Baker Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{% static 'mainapp/img/favicon.png'%}" rel="icon">
+    <link href="{% static 'mainapp/img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'mainapp/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'mainapp/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+    <link href="{% static 'mainapp/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+    <link href="{% static 'mainapp/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="{% static 'mainapp/css/style.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Baker
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <img src="{% static 'mainapp/img/portfolio/이층.jpg' %}" alt="">
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>상세 설명</h3>
+              <ul>
+                <li><strong>Category</strong>: 전리층</li>
+                <li><strong>세부</strong>: 전리권 E층</li>
+                <li><strong>출처</strong>: <a href="#">https://ko.m.wikipedia.org/wiki/%EC%A0%84%EB%A6%AC%EC%B8%B5</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>전리권 E층</h2>
+              <p>
+                E층은 중간에 위치한 층이다. 지표로부터 90km에서 120km에 위치한다. 이 층에서의 이온화는 주로 연X선(파장 1-10nm)과 원자외선 태양 복사가 산소 분자를 이온화하는 것이다. 이 층은 10MHz이하의 주파수를 가지는 전파만을 반사한다. 10MHz보다 짧은 파장에 대해서는 일부를 흡수한다. E층의 수직구조는 기본적으로 이온화와 재결합의 정도에 따라 결정된다. 밤이 되어 이온화의 주요 에너지원이었던 태양복사가 끊어지면 E층은 사라지기 시작한다. 이에 따라서 E층의 강도가 가장 높은 지점의 고도가 올라가게 되는데, 이는 하층일수록 재결합 속도가 빠르기 때문이다. E층의 강도가 가장 높은 지점이 상승하게 되면 전파가 닿는 거리가 길어지게 된다. 고층 대기 중성풍의 일변화 역시 E층의 수직구조에 영향을 준다. 밤이 되면 전파를 반사시키기 때문에 중파방송을 멀리서도 들을 수 있는 원인 중 하나다.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'mainapp/vendor/purecounter/purecounter_vanilla.js'%}"></script>
+  <script src="{% static 'mainapp/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'mainapp/vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'mainapp/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'mainapp/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'mainapp/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'mainapp/js/main.js'%}"></script>
+
+</body>
+
+</html>

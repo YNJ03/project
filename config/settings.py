@@ -52,6 +52,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'config.urls'
 
+### 내 서버내에서 iframe 적용하기
+X_FRAME_OPTIONS= 'SAMEORIGIN'
+### iframe 적용 안하기
+# X_FRAME_OPTIONS = 'DENY'
+ROOT_URLCONF = 'config.urls'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

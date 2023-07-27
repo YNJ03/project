@@ -189,7 +189,7 @@
   });
 
   /**
-   * Porfolio isotope and filter
+   * Porfolio isotope and filter(태양이론)
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
@@ -215,7 +215,61 @@
       }, true);
     }
 
+    /* 포트폴리오 2(데이터분석) 처리.. */
+    let portfolioContainer2 = select('.portfolio-container2');
+    if (portfolioContainer2) {
+      let portfolioIsotope2 = new Isotope(portfolioContainer2, {
+        itemSelector: '.portfolio-item2',
+        layoutMode: 'fitRows'
+      });
+
+      let portfolioFilters2 = select('#portfolio-flters2 li', true);
+
+      on('click', '#portfolio-flters2 li', function(e) {
+        e.preventDefault();
+        portfolioFilters2.forEach(function(el) {
+          el.classList.remove('filter-active2');
+        });
+        this.classList.add('filter-active2');
+
+        portfolioIsotope2.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+
+      }, true);
+    }
+
+    /* 포트폴리오 3(데이터분석) 처리.. */
+    let portfolioContainer3 = select('.portfolio-container3');
+    if (portfolioContainer3) {
+      let portfolioIsotope3 = new Isotope(portfolioContainer3, {
+        itemSelector: '.portfolio-item3',
+        layoutMode: 'fitRows'
+      });
+
+      let portfolioFilters3 = select('#portfolio-flters3 li', true);
+
+      on('click', '#portfolio-flters3 li', function(e) {
+        e.preventDefault();
+        portfolioFilters3.forEach(function(el) {
+          el.classList.remove('filter-active3');
+        });
+        this.classList.add('filter-active3');
+
+        portfolioIsotope3.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+
+      }, true);
+    }
   });
+
+
+
+
+
+
+
 
   /**
    * Initiate portfolio lightbox 
